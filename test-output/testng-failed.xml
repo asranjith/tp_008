@@ -3,6 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="com.tp.demo.OrganizationTest.CreateOrganizationTest">
+        <methods>
+          <include name="closeDB"/>
+          <include name="createOrgTest"/>
+          <include name="login"/>
+          <include name="connectToDB"/>
       <class name="tp_008.Oppurtunity">
         <methods>
           <include name="closeDB"/>
@@ -13,6 +19,7 @@
           <include name="launchBrowser"/>
           <include name="logout"/>
         </methods>
+      </class> <!-- com.tp.demo.OrganizationTest.CreateOrganizationTest -->
       </class> <!-- tp_008.Oppurtunity -->
     </classes>
   </test> <!-- Default test(failed) -->

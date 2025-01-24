@@ -40,7 +40,7 @@ public class BaseClass {
     @BeforeSuite(groups = {"smokeTest","regressionTest"})
     public void connectToDB() throws SQLException {
     	Reporter.log("=====connected to DB=======",true);
-    	dbUtilis.getDbConnection();	
+    	//dbUtilis.getDbConnection();	
     }
     
     @Parameters("BROWSER")
@@ -82,13 +82,13 @@ public class BaseClass {
     
     @AfterClass(groups = {"smokeTest","regressionTest"})
     public void closeBrowser() {
-    	driver.quit();
+    	//driver.quit();
     	Reporter.log("=====BROWSER IS CLOSED======",true);
     }
     
     @AfterSuite(groups = {"smokeTest","regressionTest"})
     public void closeDB() {
-    	dbUtilis.closeDbConnection();
+    	//dbUtilis.closeDbConnection();
     	Reporter.log("=====database is closed=====",true);
     }
 }

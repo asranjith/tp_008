@@ -66,4 +66,18 @@ public class CreatingNewOrganisationPage {
 		phoneTextField.sendKeys(phone);
 		saveButton.click();
 	}
+	
+	@FindBy(id="email1")
+	private WebElement emailTF;
+	
+	@FindBy(name="bill_street")
+	private WebElement addressTAF;
+	
+	public void createOrganization(String orgName,String phone,String email,String address) {
+		organisationNameTextField.sendKeys(orgName);
+		phoneTextField.sendKeys(phone);
+		emailTF.sendKeys(email);
+		addressTAF.sendKeys(address);
+		saveButton.click();
+	}
 }
